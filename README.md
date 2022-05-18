@@ -1,6 +1,6 @@
-# Project Name
+# Portfolio page
 
-> One paragraph statement about the project.
+My personal résumé website, created using HTML and CSS. Displays my web presence, story, work experience, education, projects, achievements, and contact information.
 
 ![screenshot](./app_screenshot.png)
 
@@ -8,7 +8,10 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages,
+- HTML
+- CSS
+    CSS Flexbox
+    CSS Media Query
 - frameworks,
 - technologies used
 
