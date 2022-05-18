@@ -10,10 +10,9 @@ Additional description about the project and its features.
 
 - HTML
 - CSS
-    CSS Flexbox
-    CSS Media Query
-- frameworks,
-- technologies used
+   * CSS Flexbox
+   * CSS Media Query
+- stylint
 
 ## Live Demo
 
@@ -89,9 +88,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration, resources/assets used
-- etc
+- Trainer Mr Jamiu Olaleye
+- Brad Traversy(Traversy media)
 
 ## 📝 License
 
