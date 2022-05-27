@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #e5e5e5;
+  }
+  
+  :root {
+    --primaryColor: #6070ff;
+  }
+  
+  .firstsection {
+    background-color: #fff;
+    height: 100vh;
+    border-radius: 0 0 0 150px;
+    padding: 35px 24px;
+  }
+  
+  /* NAVIGATION BAR */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+  
+  .nav-checkbox {
+    display: none;
+  }
+  
+  .logo-container {
+    color: #6070ff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger-btn {
+    color: #67798e;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* END OF NAVIGATION BAR */
+  
+  /* INTRODUCTION */
+  .introduction {
+    display: flex;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ellipse5,
+  .ellipse3,
+  .ellipse4,
+  .ellipse8,
+  .ellipse11,
+  .ellipse12,
+  .ellipse13,
+  .ellipse15,
+  .ellipse14,
+  .rectangle7,
+  .rectangle4,
+  .rectangle6,
+  .rectangle5{
+    position: absolute;
+  }
+
+  .ellipse11 {
+    top: 128.64px;
+    left: 0px;
+  }
+  
+  .ellipse5 {
+    top: 155.81px;
+    left: 125px;
+  }
+  
+  .ellipse3 {
+    top: 152.24px;
+    right: 0;
+  }
+  
+  .ellipse8 {
+    top: 110px;
+    right: 146px;
+  }
+
+  .ellipse14{
+    left: 298px;
+    top: 315px; 
+  }
+  
+  .rectangle6{
+    top: 104px;
+    left: 0px;
+  }
+
+  .rectangle7 {
+    top: 148px;
+    left: 127.18px;
+  }
+  
+  .rectangle4 {
+    top: 118px;
+    right: 0;
+  }
+  
+  .vector {
+    margin: 12px 20px 0 0;
+  }
+  
+  .ellipse15 {
+    left: 80px;
+    top: 580px;
+  }
+  
+  .rectangle5 {
+    left: 187px;
+    bottom: 26.85px;
+  }
+  
+  .ellipse4 {
+    left: 237px;
+    bottom: 40.9px;
+  }
+  
+  .name {
+    font-weight: 700;
+    font-size: 40px;
+    color: #172b4d;
+    line-height: 52px;
+  }
+  
+  .about {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #344563;
+    margin-top: 12px;
+  }
+  
+  .connect {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7f8cff;
+    margin-top: 12px;
+  }
+  
+  .ellipse12 {
+    left: 420px;
+    top: 474px;
+    z-index: 10;
+  }
+  
+  .ellipse13 {
+    left: 410px;
+    top: 485px;
+  }
+  
+  /* END OF INTRODUCTION */
+  
