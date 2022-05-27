@@ -10,13 +10,11 @@ Additional description about the project and its features.
 
 - HTML
 - CSS
-   * CSS Flexbox
-   * CSS Media Query
+  - CSS Flexbox
+  - CSS Media Query
 - stylint
 
 ## Live Demo
-
-[Live Demo Link](https://livedemo.com)
 
 ### Development (Running locally)
 
