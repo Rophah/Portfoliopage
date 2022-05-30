@@ -8,11 +8,15 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #e5e5e5;
+  background-color: #ebebff;
+ 
 }
 
 :root {
   --primaryColor: #6070ff;
+  --secondaryColor: #172b4d;
+  --button: #396df2;
+  --arrows: #acb7c3; 
 }
 
 .firstsection {
@@ -124,12 +128,12 @@ nav {
 
 .rectangle5 {
   left: 187px;
-  bottom: 26.85px;
+  top: 653px;
 }
 
 .ellipse4 {
   left: 237px;
-  bottom: 40.9px;
+  top: 655px;
 }
 
 .name {
@@ -153,17 +157,208 @@ nav {
   line-height: 24px;
   color: #7f8cff;
   margin-top: 12px;
+  text-transform: uppercase;
 }
 
 .ellipse12 {
-  left: 420px;
-  top: 474px;
+  left: 317.67px;
+  top: 490px;
   z-index: 10;
 }
 
 .ellipse13 {
-  left: 410px;
-  top: 485px;
+  left: 304px;
+  top: 500px;
 }
 
 /* END OF INTRODUCTION */
+
+/* Work section */
+
+
+.worksection{
+    min-width: 375px; 
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    min-height: 100vh;
+    gap: 80px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+
+  width: 327px;
+  background: #fff;
+  
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  padding-bottom: 3rem;
+}
+
+.card1paragraph-text{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+
+  color: var(--secondaryColor);
+}
+
+.card1description-text{
+  display: flex;
+  flex-direction: row;
+  height: 16px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.canopy{
+  font-weight: 700;
+  color: #344563;
+}
+
+.marginright{
+  margin-right: 12px;
+}
+
+.counterimg{
+  width: 8px;
+  height: 8px;
+}
+
+.imgtext{
+  font-weight: 600;
+  opacity: .6;
+}
+
+.cardpara{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  opacity: .8;
+  word-spacing: 3px;
+}
+
+.card1-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card1-button-paragraph{
+  padding: 4px 12px;
+  background: #ebebff;
+  border-radius: 8px;
+  color: var(--primaryColor);
+  margin-right: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.card1-project{
+  border: 1px solid var(--button);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  margin-top: 10px; 
+  color: var(--button);
+}
+
+/* End of Work section */
+
+/* About Me section */
+  
+.aboutsection{
+  padding: 100px 24px;
+  background-color: #fff;
+  border-radius: 0 70px 0 0;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: flex-start;
+}
+
+.aboutsection h2{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  
+  color: var(--secondaryColor);
+}
+
+.resume{
+  background: transparent;
+  font-weight: 700;
+  padding: .8rem;
+  margin-top: 1rem;
+}
+
+.resume a{
+  color: var(--button);
+  letter-spacing: 0.07em;  
+}
+
+.skills{
+  width: 96%;
+}
+
+.writtenlanguage, 
+.language,
+.frameworks{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5rem;
+  padding: 2rem 1rem;
+}
+
+.language,
+.frameworks{
+  display: flex;
+  justify-content: space-between; 
+}
+
+.language p,
+.frameworks p{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.arrow{
+  font-size: 1.5rem;
+  color: var(--arrows);
+  margin-right: 2rem;
+}
+
+.writtenlanguage{
+  background: #F7F7F9;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.writtenlanguage > p{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  margin-left: 1rem;
+  color: #253858;
+}
+
+.line{
+  height: 2px;
+  background:  #dfe1e6;
+  width: 100%;
+}
+
+/* End of About section */
+
+ 
