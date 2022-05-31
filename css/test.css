@@ -1,98 +1,96 @@
- 
-  .card{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
-    gap: 12px;
-  
-    /* width: 327px; */
-  
-    background: #FFFFFF;
-    
-    border: 1px solid #DFE1E6;
-    border-radius: 16px;
-  }
-  
-  .card1paragraph-text{
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 44px;
-  
-    color: #172B4D;
-  }
-  
-  .card1description-text{
-    display: flex;
-    flex-direction: row;
-    height: 16px;
-    align-items: center;
-    font-size: 14px;
-  }
-  
-  .canopy{
-    font-weight: 700;
-    color: #344563;
-  }
-  
-  .marginright{
-    margin-right: 12px;
-  }
-  
-  .counterimg{
-    width: 8px;
-    height: 8px;
-  }
-  
-  .imgtext{
-    font-weight: 600;
-    opacity: .6;
-  }
-  
-  .cardpara{
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 24px;
-    opacity: .8;
-    word-spacing: 3px;
-  }
-  
-  .card1-button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .card1-button-paragraph{
-    padding: 4px 12px;
-    background: #EBEBFF;
-    border-radius: 8px;
-    color: var(--primaryColor);
-    margin-right: 12px;
-    letter-spacing: 0.03em;
-    font-weight: 500;
-    font-size: 13px;
-  }
-  
-  .card1-project{
-    border: 1px solid #396DF2;
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 17px;
-    letter-spacing: 0.03em;
-    margin-top: 10px; 
-    color: #396DF2;
-  }
-  
-  /* End of Work section */
-  
-  /* About Me section */
-  
-    .about{
-      padding: 100px 0;
-      background-color: #fff;
-      border-radius: 0 70px 0 0;
-    }
-  
-  /* About Me section */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+
+  /* width: 327px; */
+
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+}
+
+.card1paragraph-text {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.card1description-text {
+  display: flex;
+  flex-direction: row;
+  height: 16px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.canopy {
+  font-weight: 700;
+  color: #344563;
+}
+
+.marginright {
+  margin-right: 12px;
+}
+
+.counterimg {
+  width: 8px;
+  height: 8px;
+}
+
+.imgtext {
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.cardpara {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  opacity: 0.8;
+  word-spacing: 3px;
+}
+
+.card1-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card1-button-paragraph {
+  padding: 4px 12px;
+  background: #ebebff;
+  border-radius: 8px;
+  color: var(--primaryColor);
+  margin-right: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.card1-project {
+  border: 1px solid #396df2;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+  color: #396df2;
+}
+
+/* End of Work section */
+
+/* About Me section */
+
+.about {
+  padding: 100px 0;
+  background-color: #fff;
+  border-radius: 0 70px 0 0;
+}
+
+/* About Me section */

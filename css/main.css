@@ -9,14 +9,13 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ebebff;
- 
 }
 
 :root {
   --primaryColor: #6070ff;
   --secondaryColor: #172b4d;
   --button: #396df2;
-  --arrows: #acb7c3; 
+  --arrows: #acb7c3;
 }
 
 .firstsection {
@@ -175,41 +174,37 @@ nav {
 
 /* Work section */
 
-
-.worksection{
-    min-width: 375px; 
-    margin: 100px 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    min-height: 100vh;
-    gap: 80px;
+.worksection {
+  min-width: 375px;
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 100vh;
+  gap: 80px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 16px;
   gap: 12px;
-
   width: 327px;
   background: #fff;
-  
   border: 1px solid #dfe1e6;
   border-radius: 16px;
   padding-bottom: 3rem;
 }
 
-.card1paragraph-text{
+.card1paragraph-text {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-
   color: var(--secondaryColor);
 }
 
-.card1description-text{
+.card1description-text {
   display: flex;
   flex-direction: row;
   height: 16px;
@@ -217,40 +212,40 @@ nav {
   font-size: 14px;
 }
 
-.canopy{
+.canopy {
   font-weight: 700;
   color: #344563;
 }
 
-.marginright{
+.marginright {
   margin-right: 12px;
 }
 
-.counterimg{
+.counterimg {
   width: 8px;
   height: 8px;
 }
 
-.imgtext{
+.imgtext {
   font-weight: 600;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-.cardpara{
+.cardpara {
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;
-  opacity: .8;
+  opacity: 0.8;
   word-spacing: 3px;
 }
 
-.card1-button{
+.card1-button {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.card1-button-paragraph{
+.card1-button-paragraph {
   padding: 4px 12px;
   background: #ebebff;
   border-radius: 8px;
@@ -261,59 +256,73 @@ nav {
   font-size: 13px;
 }
 
-.card1-project{
+.card1-project {
   border: 1px solid var(--button);
   padding: 10px;
   border-radius: 10px;
   font-weight: 500;
   font-size: 17px;
   letter-spacing: 0.03em;
-  margin-top: 10px; 
+  margin-top: 10px;
   color: var(--button);
+}
+
+.card1-project:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* End of Work section */
 
 /* About Me section */
-  
-.aboutsection{
+
+.aboutsection {
   padding: 100px 24px;
   background-color: #fff;
   border-radius: 0 70px 0 0;
-  
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   align-items: flex-start;
 }
 
-.aboutsection h2{
+.aboutsection h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  
   color: var(--secondaryColor);
 }
 
-.resume{
+.vimage {
+  margin-bottom: 2.5rem;
+}
+
+.resume {
   background: transparent;
   font-weight: 700;
-  padding: .8rem;
+  padding: 0.8rem;
   margin-top: 1rem;
 }
 
-.resume a{
+.resume a {
   color: var(--button);
-  letter-spacing: 0.07em;  
+  letter-spacing: 0.07em;
 }
 
-.skills{
+.resume:hover {
+  background-color: var(--primaryColor);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.skills {
   width: 96%;
 }
 
-.writtenlanguage, 
+.writtenlanguage,
 .language,
-.frameworks{
+.frameworks {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -321,31 +330,35 @@ nav {
   padding: 2rem 1rem;
 }
 
+.language {
+  height: 7rem;
+}
+
 .language,
-.frameworks{
+.frameworks {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .language p,
-.frameworks p{
+.frameworks p {
   font-weight: 500;
   font-size: 20px;
 }
 
-.arrow{
+.arrow {
   font-size: 1.5rem;
   color: var(--arrows);
   margin-right: 2rem;
 }
 
-.writtenlanguage{
-  background: #F7F7F9;
+.writtenlanguage {
+  background: #f7f7f9;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-.writtenlanguage > p{
+.writtenlanguage > p {
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
@@ -353,12 +366,10 @@ nav {
   color: #253858;
 }
 
-.line{
+.line {
   height: 2px;
-  background:  #dfe1e6;
+  background: #dfe1e6;
   width: 100%;
 }
 
 /* End of About section */
-
- 
