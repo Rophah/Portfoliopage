@@ -16,6 +16,7 @@ body {
   --secondaryColor: #172b4d;
   --button: #396df2;
   --arrows: #acb7c3;
+  --fontWeight700: 700;
 }
 
 .firstsection {
@@ -38,7 +39,6 @@ nav {
 
 .logo-container {
   color: #6070ff;
-  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   cursor: pointer;
@@ -136,10 +136,13 @@ nav {
 }
 
 .name {
-  font-weight: 700;
   font-size: 40px;
   color: #172b4d;
   line-height: 52px;
+}
+
+.name-about-width{
+  width: 10rem;
 }
 
 .about {
@@ -151,7 +154,6 @@ nav {
 }
 
 .connect {
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: #7f8cff;
@@ -198,7 +200,7 @@ nav {
 }
 
 .card1paragraph-text {
-  font-weight: 700;
+  font-weight: var(--fontWeight700);
   font-size: 32px;
   line-height: 44px;
   color: var(--secondaryColor);
@@ -213,7 +215,6 @@ nav {
 }
 
 .canopy {
-  font-weight: 700;
   color: #344563;
 }
 
@@ -232,7 +233,6 @@ nav {
 }
 
 .cardpara {
-  font-weight: 500;
   font-size: 15px;
   line-height: 24px;
   opacity: 0.8;
@@ -252,15 +252,21 @@ nav {
   color: var(--primaryColor);
   margin-right: 12px;
   letter-spacing: 0.03em;
-  font-weight: 500;
   font-size: 13px;
+}
+
+.fontweight500{
+  font-weight: 500;
+}
+
+.fontweight700{
+  font-weight: 700;
 }
 
 .card1-project {
   border: 1px solid var(--button);
   padding: 10px;
   border-radius: 10px;
-  font-weight: 500;
   font-size: 17px;
   letter-spacing: 0.03em;
   margin-top: 10px;
@@ -288,7 +294,6 @@ nav {
 }
 
 .aboutsection h2 {
-  font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   color: var(--secondaryColor);
@@ -296,11 +301,12 @@ nav {
 
 .vimage {
   margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .resume {
   background: transparent;
-  font-weight: 700;
   padding: 0.8rem;
   margin-top: 1rem;
 }
@@ -317,7 +323,7 @@ nav {
 }
 
 .skills {
-  width: 96%;
+  width: 100%;
 }
 
 .writtenlanguage,
