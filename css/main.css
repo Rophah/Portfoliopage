@@ -17,6 +17,7 @@ body {
   --button: #396df2;
   --arrows: #acb7c3;
   --fontWeight700: 700;
+  --contentColor: #ebebff;
 }
 
 .firstsection {
@@ -72,7 +73,12 @@ nav {
 .rectangle7,
 .rectangle4,
 .rectangle6,
-.rectangle5 {
+.rectangle5,
+.rectangle4contact,
+.ellipse3contact,
+.ellipse12contact,
+.ellipse5contact,
+.rectangle7contact {
   position: absolute;
 }
 
@@ -146,11 +152,14 @@ nav {
 }
 
 .about {
-  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #344563;
   margin-top: 12px;
+}
+
+.fontweight400 {
+  font-weight: 400;
 }
 
 .connect {
@@ -247,7 +256,7 @@ nav {
 
 .card1-button-paragraph {
   padding: 4px 12px;
-  background: #ebebff;
+  background: var(--contentColor);
   border-radius: 8px;
   color: var(--primaryColor);
   margin-right: 12px;
@@ -379,3 +388,102 @@ nav {
 }
 
 /* End of About section */
+
+/* Contact me */
+
+.contactme {
+  background: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 24px 0 24px;
+  border-radius: 70px 0 0 0;
+  color: #fff;
+}
+
+.col {
+  color: #fff;
+  padding-left: 35px;
+}
+
+.contactp {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--contentColor);
+  padding: 20px 5px 40px;
+}
+
+.contactform {
+  display: flex;
+  flex-direction: column;
+}
+
+.formradius {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 400;
+  padding-left: 16px;
+  border: none;
+  outline: none;
+}
+
+.forminput {
+  height: 50px;
+}
+
+textarea {
+  font-size: 15px;
+  padding-top: 16px;
+  cursor: text;
+  color: #b3bac5;
+}
+
+.formbutton {
+  background: #fff;
+  border: none;
+  height: 50px;
+  color: var(--primaryColor);
+  font-size: 17px;
+  font-weight: 500;
+  width: 150px;
+  border-radius: 8px;
+  margin-bottom: 35px;
+}
+
+.blackline {
+  height: 5px;
+  background: #0d151e;
+  width: 134px;
+  display: flex;
+  align-self: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.rectangle4contact {
+  right: 0;
+  top: 4770.4px;
+}
+
+.ellipse3contact {
+  right: 0;
+  top: 4795.75px;
+}
+
+.ellipse12contact {
+  left: 130px;
+  top: 4770px;
+}
+
+.ellipse5contact {
+  left: 235.74px;
+  top: 5460.27px;
+}
+
+.rectangle7contact {
+  left: 235.74px;
+  top: 5430.27px;
+}
+
+/* End of Contact me */
