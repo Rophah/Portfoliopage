@@ -341,12 +341,19 @@
       <form action="https://formspree.io/f/xbjwbpyj" method="POST" class="contactform">
         <input
           class="formradius forminput"
+          name="name"
           type="text"
           placeholder="Your name"
           maxlength="30"
           required
         />
-        <input class="formradius forminput" type="email" placeholder="Email" required />
+        <input
+          class="formradius forminput"
+          name="email"
+          type="email"
+          placeholder="Your email"
+          required
+        />
         <textarea
           class="formradius"
           name="message"
@@ -355,9 +362,8 @@
           rows="10"
           maxlength="500"
           required
-        >
-        Write your message here</textarea
-        >
+          placeholder="Write your message here"
+        ></textarea>
         <button type="submit" class="formbutton fontweight500">Get In Touch</button>
       </form>
       <div class="blackline"></div>
