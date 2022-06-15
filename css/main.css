@@ -282,7 +282,8 @@ nav {
   color: var(--button);
 }
 
-.card1-project:hover {
+.card1-project:hover,
+.formbutton:hover {
   background-color: var(--primaryColor);
   color: #fff;
   transform: scale(1.1);
@@ -486,4 +487,10 @@ textarea {
   top: 5430.27px;
 }
 
+.formbutton:hover {
+  background-color: transparent;
+  color: #fff;
+  transform: scale(1.1);
+  border: 1px solid #fff;
+}
 /* End of Contact me */
