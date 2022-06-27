@@ -17,7 +17,6 @@ body {
   --button: #396df2;
   --arrows: #acb7c3;
   --fontWeight700: 700;
-  --contentColor: #ebebff;
 }
 
 .firstsection {
@@ -25,6 +24,7 @@ body {
   height: 100vh;
   border-radius: 0 0 0 150px;
   padding: 35px 24px;
+  position: relative;
 }
 
 /* NAVIGATION BAR */
@@ -51,14 +51,18 @@ nav {
   cursor: pointer;
 }
 
+.nav-list {
+  display: none;
+}
+
 /* END OF NAVIGATION BAR */
 
 /* INTRODUCTION */
 .introduction {
   display: flex;
   height: 85vh;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .ellipse5,
@@ -66,8 +70,6 @@ nav {
 .ellipse4,
 .ellipse8,
 .ellipse11,
-.ellipse12,
-.ellipse13,
 .ellipse15,
 .ellipse14,
 .rectangle7,
@@ -78,7 +80,18 @@ nav {
 .ellipse3contact,
 .ellipse12contact,
 .ellipse5contact,
-.rectangle7contact {
+.rectangle7contact,
+.rectangle6contact,
+.ellipse13contact,
+.ellipse11contact,
+.ellipseD11,
+.ellipseD3,
+.rectangleD4,
+.rectangleD6,
+.rectangleD7,
+.ellipseD5,
+.ellipseD12,
+.ellipseD13 {
   position: absolute;
 }
 
@@ -141,10 +154,23 @@ nav {
   top: 655px;
 }
 
+.ellipseD12 {
+  left: 317.67px;
+  top: 490px;
+  width: 24.14px;
+}
+
+.ellipseD13 {
+  left: 306px;
+  top: 500px;
+  width: 30px;
+}
+
 .name {
   font-size: 40px;
   color: #172b4d;
   line-height: 52px;
+  width: 300px;
 }
 
 .name-about-width {
@@ -152,14 +178,11 @@ nav {
 }
 
 .about {
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #344563;
   margin-top: 12px;
-}
-
-.fontweight400 {
-  font-weight: 400;
 }
 
 .connect {
@@ -168,17 +191,6 @@ nav {
   color: #7f8cff;
   margin-top: 12px;
   text-transform: uppercase;
-}
-
-.ellipse12 {
-  left: 317.67px;
-  top: 490px;
-  z-index: 10;
-}
-
-.ellipse13 {
-  left: 304px;
-  top: 500px;
 }
 
 /* END OF INTRODUCTION */
@@ -221,6 +233,12 @@ nav {
   height: 16px;
   align-items: center;
   font-size: 14px;
+  margin: 1rem 0 1rem 0;
+}
+
+.portfolioCard {
+  width: 295px;
+  height: 220px;
 }
 
 .canopy {
@@ -252,11 +270,12 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 1.3rem 0 3rem 0;
 }
 
 .card1-button-paragraph {
   padding: 4px 12px;
-  background: var(--contentColor);
+  background: #ebebff;
   border-radius: 8px;
   color: var(--primaryColor);
   margin-right: 12px;
@@ -270,6 +289,10 @@ nav {
 
 .fontweight700 {
   font-weight: 700;
+}
+
+.card-content {
+  margin-top: 1rem;
 }
 
 .card1-project {
@@ -293,13 +316,14 @@ nav {
 /* About Me section */
 
 .aboutsection {
-  padding: 100px 24px;
   background-color: #fff;
   border-radius: 0 70px 0 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   align-items: flex-start;
+  justify-content: center;
+  padding: 70px 30px;
 }
 
 .aboutsection h2 {
@@ -373,7 +397,7 @@ nav {
   margin-bottom: 1rem;
 }
 
-.writtenlanguage > p {
+.writtenlanguage-p {
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
@@ -398,6 +422,7 @@ nav {
   padding: 100px 24px 0 24px;
   border-radius: 70px 0 0 0;
   color: #fff;
+  position: relative;
 }
 
 .col {
@@ -436,7 +461,6 @@ textarea {
   font-size: 15px;
   padding-top: 16px;
   cursor: text;
-  color: #b3bac5;
 }
 
 .formbutton {
@@ -466,32 +490,514 @@ textarea {
   display: flex;
   align-self: center;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin: 20px auto 20px;
 }
 
 .rectangle4contact {
   right: 0;
-  top: 4770.4px;
+  top: 60.4px;
 }
 
 .ellipse3contact {
   right: 0;
-  top: 4795.75px;
+  top: 85.75px;
 }
 
 .ellipse12contact {
   left: 130px;
-  top: 4770px;
+  top: 65.4px;
 }
 
 .ellipse5contact {
-  left: 235.74px;
-  top: 5460.27px;
+  left: 270.74px;
+  top: 730.27px;
 }
 
 .rectangle7contact {
-  left: 235.74px;
-  top: 5430.27px;
+  left: 265.74px;
+  top: 700.27px;
+}
+
+.contactdesktopimages {
+  display: none;
 }
 
 /* End of Contact me */
+
+.introductiondesktop {
+  display: none;
+}
+
+/* Tablet view */
+
+@media (min-width: 560px) and (max-width: 916px) {
+  .introductionimages,
+  .lowerMobileImages {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    padding-right: 15px;
+  }
+
+  .nav-listspace {
+    margin-left: 3rem;
+  }
+
+  .nav-list li a {
+    color: #344563;
+    position: relative;
+  }
+
+  .nav-list li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #6070ff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 0.3s;
+  }
+
+  .nav-list li a:hover {
+    color: var(--primaryColor);
+    font-weight: 700;
+  }
+
+  .nav-list li a:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .paragraph {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+  }
+
+  .nameintro {
+    font-size: 52px;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+  }
+
+  .introductiondesktop {
+    display: block;
+  }
+
+  .ellipseD11 {
+    left: 92px;
+    top: 190.68px;
+    width: 50px;
+  }
+
+  .ellipseD3 {
+    right: 40px;
+    top: 145px;
+    width: 150px;
+  }
+
+  .rectangleD4 {
+    right: 88.83px;
+    top: 90px;
+    width: 150px;
+  }
+
+  .rectangleD6 {
+    left: 34.6px;
+    top: 145.92px;
+  }
+
+  .rectangleD7 {
+    display: none;
+  }
+
+  .ellipseD5 {
+    display: none;
+  }
+
+  .ellipseD13 {
+    left: 276.06px;
+    top: 80.5%;
+    width: 50px;
+  }
+
+  .ellipseD12 {
+    left: 290.7px;
+    top: 78%;
+    width: 36.9px;
+  }
+
+  /* Work section */
+
+  .card {
+    display: grid;
+    grid-template-areas: 'firstdivision seconddivision';
+    width: 85%;
+    padding: 16px;
+    padding-bottom: 0;
+  }
+
+  .thirddiv {
+    grid-area: seconddivision;
+  }
+
+  .fourthdiv {
+    grid-area: firstdivision;
+  }
+
+  .portfolioCard {
+    width: 300px;
+    height: 400px;
+  }
+
+  .card-content {
+    margin-top: 1rem;
+  }
+
+  .card1paragraph-text {
+    margin-bottom: 1rem;
+  }
+
+  .card1description-text {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .cardpara {
+    font-size: 17px;
+    padding: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card1-button {
+    margin-bottom: 2rem;
+  }
+
+  .card1-projectcard4 {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Work section */
+
+  /* About section */
+
+  .aboutsection {
+    display: flex;
+    align-items: center;
+  }
+
+  .aboutsectioncenter {
+    width: 80%;
+  }
+
+  /* End of About section */
+
+  /* Contact section */
+
+  .contactmewidth {
+    width: 75%;
+    margin: 0 auto 70px;
+  }
+
+  .name {
+    width: 100%;
+  }
+
+  .col,
+  .contactp {
+    text-align: center;
+  }
+
+  .formbutton {
+    margin: 0 auto;
+  }
+
+  .blackline {
+    display: none;
+  }
+
+  .rectangle7contact {
+    left: 70%;
+    top: 700.27px;
+  }
+
+  .ellipse5contact {
+    left: 70.2%;
+    top: 727.27px;
+  }
+
+  .contactdesktopimages {
+    display: none;
+  }
+
+  /* End of Contact section */
+}
+
+/* end of Tablet view */
+
+/* Desktop view */
+@media screen and (min-width: 917px) {
+  .introductionimages,
+  .lowerMobileImages {
+    display: none;
+  }
+
+  header {
+    margin: 25px 5% 0;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+    padding-right: 20px;
+    font-size: 1.2rem;
+  }
+
+  .nav-list li a {
+    color: #344563;
+    position: relative;
+  }
+
+  .nav-list li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #6070ff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 0.3s;
+  }
+
+  .nav-list li a:hover {
+    color: var(--primaryColor);
+    font-weight: 700;
+  }
+
+  .nav-list li a:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .nav-listspace {
+    margin-left: 5rem;
+  }
+
+  .paragraph {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+  }
+
+  .nameintro {
+    font-size: 52px;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+  }
+
+  .introductiondesktop {
+    display: block;
+  }
+
+  .ellipseD11 {
+    left: 92px;
+    top: 200.68px;
+  }
+
+  .ellipseD3 {
+    right: 40px;
+    top: 170px;
+  }
+
+  .rectangleD4 {
+    right: 98.83px;
+    top: 90px;
+  }
+
+  .rectangleD6 {
+    left: 34.6px;
+    top: 160.92px;
+  }
+
+  .rectangleD7 {
+    right: 50%;
+    top: 190px;
+  }
+
+  .ellipseD5 {
+    right: 51%;
+    top: 205.68px;
+  }
+
+  .ellipseD13 {
+    left: 276.06px;
+    top: 80.5%;
+    width: 50px;
+  }
+
+  .ellipseD12 {
+    left: 290.7px;
+    top: 78%;
+    width: 36.9px;
+  }
+
+  /* Work section */
+
+  .card {
+    display: grid;
+    grid-template-areas: 'firstdivision seconddivision';
+    width: 85%;
+    padding: 16px;
+    padding-bottom: 0px;
+  }
+
+  .thirddiv {
+    grid-area: seconddivision;
+  }
+
+  .fourthdiv {
+    grid-area: firstdivision;
+  }
+
+  .portfolioCard {
+    width: 544px;
+    height: 448px;
+  }
+
+  .card-content {
+    margin-top: 3.2rem;
+  }
+
+  .card1paragraph-text {
+    margin-bottom: 1.5rem;
+  }
+
+  .card1description-text {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .cardpara {
+    font-size: 17px;
+    padding: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card1-button {
+    margin-bottom: 3.5rem;
+  }
+
+  /* end of Work section */
+
+  /* About me */
+
+  .aboutsection {
+    min-height: 85vh;
+  }
+
+  .aboutsectioncenter {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 80px;
+  }
+
+  .aboutparagraph {
+    width: 47%;
+  }
+
+  .language {
+    padding-bottom: 4rem;
+    height: 0;
+    font-size: 1.5rem;
+  }
+
+  .languages ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .writtenlanguage {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.4rem 2.5rem 2rem 0.6rem;
+  }
+
+  .writtenlanguage-p {
+    margin: 9px 0 0;
+  }
+
+  /* End of About me */
+
+  /* Contact section */
+
+  .contactmewidth {
+    width: 50%;
+    margin: 0 auto 90px;
+  }
+
+  .formbutton {
+    margin: 0 auto;
+  }
+
+  .blackline {
+    display: none;
+  }
+
+  .rectangle7contact {
+    left: 8%;
+    top: 50%;
+  }
+
+  .ellipse5contact {
+    left: 8.2%;
+    top: 54%;
+  }
+
+  .contactdesktopimages {
+    display: block;
+  }
+
+  .ellipse11contact {
+    left: 31.8%;
+    top: 84%;
+  }
+
+  .ellipse13contact {
+    left: 80.2%;
+    top: 73%;
+  }
+
+  .rectangle6contact {
+    left: 30%;
+    top: 82%;
+  }
+
+  .name {
+    width: 100%;
+  }
+
+  .col,
+  .contactp {
+    text-align: center;
+  }
+
+  /* end of Contact section */
+}
+
+/* End of Desktop view */
