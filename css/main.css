@@ -860,7 +860,7 @@ textarea {
     grid-template-areas: 'firstdivision seconddivision';
     width: 85%;
     padding: 16px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   .thirddiv {
