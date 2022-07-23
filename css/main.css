@@ -23,18 +23,109 @@ body {
   background-color: #fff;
   height: 100vh;
   border-radius: 0 0 0 150px;
-  padding: 35px 24px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAVIGATION BAR */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0 24px;
+  height: 100px;
+  width: 100%;
+}
+
+.logo-container,
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: 0;
+}
+
+.logo-container {
+  width: 15px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6070ff;
+  margin-left: 30px;
+}
+
+.nav-list {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  float: right;
+  background: var(--primaryColor);
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 32px;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.nav-list li {
+  line-height: 44px;
+  margin: 140px auto;
+  display: none;
+  width: 150px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.resume a {
+  color: var(--button);
+  letter-spacing: 0.07em;
+}
+
+
+.nav-list li a {
+  color: #fff;
+}
+
+.hamburger-btn {
+  color: #67798e;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-right: 36px;
+}
+
+.menu {
+  color: var(--primaryColor);
+}
+
+.close {
+  display: none;
 }
 
 .nav-checkbox {
+  display: none;
+}
+
+.nav-checkbox:checked ~ ul.nav-list {
+  height: 100vh;
+  z-index: 10;
+}
+
+.nav-checkbox:checked ~ ul.nav-list li {
+  display: block;
+}
+
+.nav-checkbox:checked ~ label.hamburger-btn .close {
+  display: block;
+  z-index: 1000;
+  color: #fff;
+}
+
+.nav-checkbox:checked ~ label.hamburger-btn .menu {
+  display: none;
+}
+
+/* .nav-checkbox {
   display: none;
 }
 
@@ -53,7 +144,15 @@ nav {
 
 .nav-list {
   display: none;
-}
+} */
+
+/* .nav-list {
+  background-color: var(--primaryColor);
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  z-index: 1000;
+} */
 
 /* END OF NAVIGATION BAR */
 
@@ -344,11 +443,6 @@ nav {
   margin-top: 1rem;
 }
 
-.resume a {
-  color: var(--button);
-  letter-spacing: 0.07em;
-}
-
 .resume:hover {
   background-color: var(--primaryColor);
   color: #fff;
@@ -427,7 +521,6 @@ nav {
 
 .col {
   color: #fff;
-  padding-left: 35px;
 }
 
 .contactp {
@@ -531,6 +624,10 @@ textarea {
 /* Tablet view */
 
 @media (min-width: 560px) and (max-width: 916px) {
+  header {
+    margin: 25px 5% 0;
+  }
+
   .introductionimages,
   .lowerMobileImages {
     display: none;
@@ -541,12 +638,27 @@ textarea {
   }
 
   .nav-list {
-    display: flex;
-    padding-right: 15px;
+    position: relative;
+    height: 100px;
+    float: right;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 0.5%;
   }
 
-  .nav-listspace {
-    margin-left: 3rem;
+  .nav-list li {
+    display: inline-block;
+    margin: 0 0.1%;
+    transition: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .nav-list li:last-child {
+    display: none;
   }
 
   .nav-list li a {
@@ -759,9 +871,27 @@ textarea {
   }
 
   .nav-list {
-    display: flex;
-    padding-right: 20px;
-    font-size: 1.2rem;
+    position: relative;
+    height: 100px;
+    float: right;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 3%;
+  }
+
+  .nav-list li {
+    display: inline-block;
+    margin: 0 0.5%;
+    transition: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .nav-list li:last-child {
+    display: none;
   }
 
   .nav-list li a {
