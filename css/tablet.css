@@ -1,0 +1,222 @@
+.introductionimages,
+.lowerMobileImages {
+  display: none;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.nav-list {
+  position: static;
+  display: flex;
+  width: auto;
+  margin-top: 0;
+  margin-right: 3%;
+  background: none;
+  transition: none;
+}
+
+.nav-list li {
+  display: block;
+  margin: 0 10px;
+  transition: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.nav-list li:last-child {
+  display: none;
+}
+
+.nav-list li a {
+  color: #344563;
+  position: relative;
+}
+
+.nav-list li a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #6070ff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform-origin: left;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 0.3s;
+}
+
+.nav-list li a:hover {
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+
+.nav-list li a:hover::after {
+  transform: scale(1, 1);
+}
+
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+}
+
+.nameintro {
+  font-size: 52px;
+  line-height: 60px;
+  letter-spacing: 0.37px;
+}
+
+.introductiondesktop {
+  display: block;
+}
+
+.ellipseD11 {
+  left: 92px;
+  top: 190.68px;
+  width: 50px;
+}
+
+.ellipseD3 {
+  right: 40px;
+  top: 145px;
+  width: 150px;
+}
+
+.rectangleD4 {
+  right: 88.83px;
+  top: 90px;
+  width: 150px;
+}
+
+.rectangleD6 {
+  left: 34.6px;
+  top: 145.92px;
+}
+
+.rectangleD7 {
+  display: none;
+}
+
+.ellipseD5 {
+  display: none;
+}
+
+.ellipseD13 {
+  left: 276.06px;
+  top: 80.5%;
+  width: 50px;
+}
+
+.ellipseD12 {
+  left: 290.7px;
+  top: 78%;
+  width: 36.9px;
+}
+
+/* Work section */
+
+.card {
+  display: grid;
+  grid-template-areas: 'firstdivision seconddivision';
+  width: 85%;
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.thirddiv {
+  grid-area: seconddivision;
+}
+
+.fourthdiv {
+  grid-area: firstdivision;
+}
+
+.portfolioCard {
+  width: 300px;
+  height: 400px;
+}
+
+.card-content {
+  margin-top: 1rem;
+}
+
+.card1paragraph-text {
+  margin-bottom: 1rem;
+}
+
+.card1description-text {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.cardpara {
+  font-size: 17px;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.card1-button {
+  margin-bottom: 2rem;
+}
+
+.card1-projectcard4 {
+  margin-bottom: 2.5rem;
+}
+
+/* Work section */
+
+/* About section */
+
+.aboutsection {
+  display: flex;
+  align-items: center;
+}
+
+.aboutsectioncenter {
+  width: 80%;
+}
+
+/* End of About section */
+
+/* Contact section */
+
+.contactmewidth {
+  width: 75%;
+  margin: 0 auto 70px;
+}
+
+.name {
+  width: 100%;
+}
+
+.col,
+.contactp {
+  text-align: center;
+}
+
+.formbutton {
+  margin: 0 auto;
+}
+
+.blackline {
+  display: none;
+}
+
+.rectangle7contact {
+  left: 70%;
+  top: 700.27px;
+}
+
+.ellipse5contact {
+  left: 70.2%;
+  top: 727.27px;
+}
+
+.contactdesktopimages {
+  display: none;
+}
+
+/* End of Contact section */
