@@ -2,8 +2,11 @@
   "name": "html-css-template",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.26.0",
     "hint": "^6.1.0",
     "prettier": "1.18.2",
     "stylelint": "^13.6.1",
@@ -15,8 +18,12 @@
   "scripts": {
     "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",
     "format:check": "npx prettier  --check **/*.{html,js,json,md,json,yaml,yml}",
-    "lint": "npx stylelint \"**/*.css\" --fix",
-    "lint:check": "npx stylelint \"**/*.css\"",
-    "hint": "npx hint --telemetry=off ."
+    "stylelint": "npx stylelint \"**/*.css\" --fix",
+    "stylelint:check": "npx stylelint \"**/*.css\"",
+    "hint": "npx hint --telemetry=off .",
+    "eslint": "npx eslint . --fix",
+    "eslint:check": "npx eslint .",
+    "lint": "npx stylelint \"**/*.css\" --fix && npx eslint . --fix",
+    "lint:check": "npx stylelint \"**/*.css\" && npx eslint ."
   }
 }
