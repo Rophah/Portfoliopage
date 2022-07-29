@@ -58,20 +58,20 @@ jobs:
       - name: Webhint Report
         run: npx hint --telemetry=off .
 
-    eslint:
-        name: ESLint
-        runs-on: ubuntu-latest
-        if: always()
+  eslint:
+      name: ESLint
+      runs-on: ubuntu-latest
+      if: always()
 
-        steps:
-          - name: Checkout 🛎️
-            uses: actions/checkout@v2
-          - name: Set up Node 12.x
-            uses: actions/setup-node@v1
-            with:
-              node-version: 12.x
-          - name: Setup ESLint
-              run: |
-                npm install
-            - name: ESLint Report
-              run: npx eslint .
+      steps:
+        - name: Checkout 🛎️
+          uses: actions/checkout@v2
+        - name: Set up Node 12.x
+          uses: actions/setup-node@v1
+          with:
+            node-version: 12.x
+        - name: Setup ESLint
+            run: |
+              npm install
+          - name: ESLint Report
+            run: npx eslint .
