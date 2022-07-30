@@ -295,6 +295,8 @@ nav li {
   line-height: 24px;
   opacity: 0.8;
   word-spacing: 3px;
+  text-align: justify;
+  text-justify: inter-character;
 }
 
 .card1-button {
@@ -559,23 +561,31 @@ textarea {
   width: 15px;
 }
 
-/* Tablet view */
+/* Pop up */
 
-/* @media (min-width: 560px) and (max-width: 916px) {
+.flexx {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
 
-} */
+.popUpClose {
+  color: #67798e;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding-right: .8rem;
+}
 
-/* end of Tablet view */
+.popUpParagraph {
+  padding: 1.5rem 0;
+}
 
-/* Desktop view */
+.card1description-textpadding {
+  padding-bottom: 1rem;
+}
 
-/* @media screen and (min-width: 917px) {
+.seeproject1margin {
+  margin-right: 5rem;
+}
 
-} */
 
-
-/* #btnControl:checked + ul {
-  display: none;
-} */
-
-/* End of Desktop view */
