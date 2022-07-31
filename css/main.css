@@ -274,6 +274,7 @@ nav li {
 
 .canopy {
   color: #344563;
+  text-transform: capitalize;
 }
 
 .marginright {
@@ -566,14 +567,13 @@ textarea {
 .flexx {
   display: flex;
   justify-content: space-between;
-  height: 50px;
 }
 
 .popUpClose {
   color: #67798e;
   font-size: 1.3rem;
   cursor: pointer;
-  padding-right: .8rem;
+  padding-right: 0.8rem;
 }
 
 .popUpParagraph {
@@ -584,8 +584,23 @@ textarea {
   padding-bottom: 1rem;
 }
 
-.seeproject1margin {
-  margin-right: 5rem;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(103, 121, 142, 0.6);
+  visibility: hidden;
+  z-index: -10;
 }
 
+/* open/close modal */
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
 
+.close-modal {
+  visibility: hidden;
+  z-index: -10;
+}
