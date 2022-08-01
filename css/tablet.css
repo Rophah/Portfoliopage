@@ -221,10 +221,10 @@
 
 /* End of Contact section */
 
-/* pop up modal section*/
- .PopupCard {
+/* pop up modal section */
+.PopupCard {
   height: 400px;
-  width: -webkit-fill-available;
+  width: 200%;
 }
 
-/* end of pop up modal section*/
+/* end of pop up modal section */

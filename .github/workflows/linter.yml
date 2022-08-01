@@ -60,18 +60,14 @@ jobs:
 
   eslint:
     name: ESLint
-    runs-on: ubuntu-latest
-    if: always()
-
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
-      - name: Set up Node 12.x
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: '12.x'
       - name: Setup ESLint
-          run: |
-            npm install
-        - name: ESLint Report
-          run: npx eslint .
+        run: |
+          npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
+      - name: ESLint Report
+        run: npx eslint .

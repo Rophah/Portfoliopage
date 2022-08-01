@@ -73,12 +73,14 @@ nav li {
 }
 
 @keyframes bounce {
-  0% { 
+  0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.7);
   }
+
   100% {
     transform: scale(1);
   }
@@ -624,5 +626,5 @@ textarea {
 }
 
 #githubsrc {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
