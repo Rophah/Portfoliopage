@@ -220,3 +220,11 @@
 }
 
 /* End of Contact section */
+
+/* pop up modal section*/
+ .PopupCard {
+  height: 400px;
+  width: -webkit-fill-available;
+}
+
+/* end of pop up modal section*/

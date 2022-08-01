@@ -68,10 +68,29 @@ nav li {
   color: var(--primaryColor);
   font-size: 1.5rem;
   cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+  transition: all 0.3s linear;
+}
+
+@keyframes bounce {
+  0% { 
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .close {
   display: none;
+  transition: all 0.3s linear;
+}
+
+#close-btn:hover {
+  transform: rotate(360deg);
 }
 
 .displayshow {
@@ -279,11 +298,6 @@ nav li {
 
 .marginright {
   margin-right: 12px;
-}
-
-.counterimg {
-  width: 8px;
-  height: 8px;
 }
 
 .imgtext {
@@ -589,7 +603,7 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(103, 121, 142, 0.6);
+  background-color: rgba(103, 121, 142, 0.7);
   visibility: hidden;
   z-index: -10;
 }
@@ -603,4 +617,12 @@ textarea {
 .close-modal {
   visibility: hidden;
   z-index: -10;
+}
+
+.git {
+  margin-left: 5px;
+}
+
+#githubsrc {
+  margin-left: .5rem;
 }

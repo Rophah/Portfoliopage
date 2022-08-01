@@ -73,7 +73,7 @@ const mobileMenu = () => {
   closed.classList.toggle('displayshow');
 };
 
-navListItems.forEach(element => {
+navListItems.forEach((element) => {
   element.addEventListener('click', mobileMenu);
 });
 
