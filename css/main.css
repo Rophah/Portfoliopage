@@ -601,28 +601,24 @@ textarea {
 }
 
 .modal-overlay {
-  overflow-y: scroll;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(103, 121, 142, 0.7);
-
-  /* visibility: hidden; */
   display: none;
   z-index: 1000;
 }
 
 /* open/close modal */
 .open-modal {
-  /* visibility: visible;
-  z-index: 10; */
   display: block;
 }
 
 .close-modal {
-  visibility: hidden;
-  z-index: -10;
+  /* visibility: hidden;
+  z-index: -10; */
+  display: none;
 }
 
 .git {
