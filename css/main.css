@@ -356,7 +356,7 @@ nav li {
 }
 
 .card1-project:hover {
-  background-color: var(--primaryColor);
+  background: var(--primaryColor);
   color: #fff;
   transform: scale(1.1);
 }
@@ -601,13 +601,24 @@ textarea {
 }
 
 .modal-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(103, 121, 142, 0.7);
   display: none;
   z-index: 1000;
+  overflow-y: auto;
+}
+
+.popUpModal {
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 100vh;
+
+  /* gap: 80px; */
 }
 
 /* open/close modal */
@@ -616,8 +627,6 @@ textarea {
 }
 
 .close-modal {
-  /* visibility: hidden;
-  z-index: -10; */
   display: none;
 }
 
@@ -627,4 +636,53 @@ textarea {
 
 #githubsrc {
   margin-left: 0.5rem;
+}
+
+.popUpPara {
+  font-size: 15px;
+  line-height: 24px;
+  opacity: 0.8;
+  word-spacing: 3px;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+/* pop up modal */
+
+/* .popUpModal {
+  place-items: center;
+} */
+
+.pop {
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+  padding: 3rem 16px;
+  background: white;
+  border-radius: 0.9rem;
+}
+
+.popUpsection {
+  min-width: 375px;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  height: 100vh;
+  gap: 80px;
+  overflow-y: scroll;
+}
+
+.popUp-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.3rem 0 3rem 0;
+}
+
+.card1paragraph-te {
+  font-weight: var(--fontWeight700);
+  font-size: 20px;
+  line-height: 44px;
+  color: var(--secondaryColor);
 }

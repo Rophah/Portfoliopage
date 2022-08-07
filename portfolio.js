@@ -119,26 +119,31 @@ button1.addEventListener('click', () => {
   count = 0;
   projectmodal();
   modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
 });
 
 button2.addEventListener('click', () => {
   count = 1;
   projectmodal();
   modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
 });
 
 button3.addEventListener('click', () => {
   count = 2;
   projectmodal();
   modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
 });
 
 button4.addEventListener('click', () => {
   count = 3;
   projectmodal();
   modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
 });
 
 closeBtn.addEventListener('click', () => {
   modal.classList.remove('open-modal');
+  document.body.style.overflow = 'auto';
 });
