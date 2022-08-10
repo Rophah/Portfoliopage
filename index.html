@@ -22,17 +22,20 @@
             <p class="logo-text">ROFAH ADEBANJO</p>
           </div>
 
-          <div class="menu">
-            <input type="checkbox" id="nav-checkbox" class="nav-checkbox" />
-            <label for="nav-checkbox" class="hamburger-btn">
+          <label id="nav-checkbox" class="hamburger-btn">
+            <span class="menu" id="hamburger">
               <i class="fa-solid fa-bars" aria-hidden="true"></i>
-            </label>
-          </div>
+            </span>
+            <span class="close" id="close">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </span>
+          </label>
 
-          <ul class="nav-list">
-            <li><a id="portfolio" href="#">Portfolio</a></li>
-            <li class="nav-listspace"><a id="about" href="#">About</a></li>
-            <li class="nav-listspace"><a id="contact" href="#">Contact</a></li>
+          <ul class="nav-list" id="nav-list">
+            <li><a id="portfolio" href="#worksection" class="nav-list-item">Portfolio</a></li>
+            <li><a id="about" href="#aboutsection" class="nav-list-item">About</a></li>
+            <li><a id="contact" href="#contactsection" class="nav-list-item">Contact</a></li>
+            <li class="blackline"></li>
           </ul>
         </nav>
       </header>
@@ -113,7 +116,7 @@
 
     <!-- Work section -->
 
-    <section class="worksection">
+    <section class="worksection" id="worksection">
       <!-- Card 1 -->
       <div class="card">
         <div>
@@ -265,7 +268,7 @@
     <!-- End of Work section -->
 
     <!-- About me section -->
-    <section class="aboutsection">
+    <section class="aboutsection" id="aboutsection">
       <div class="aboutsectioncenter">
         <div class="aboutparagraph">
           <h2 class="name name-about-width fontweight700">About Myself</h2>
@@ -365,7 +368,7 @@
 
     <!-- Content me section -->
 
-    <section class="contactme">
+    <section class="contactme" id="contactsection">
       <div class="contactmewidth">
         <h2 class="name col">Contact me</h2>
         <p class="fontweight400 contactp">
@@ -419,5 +422,6 @@
       </div>
     </section>
     <!-- End of Content me section -->
+    <script src="portfolio.js"></script>
   </body>
 </html>

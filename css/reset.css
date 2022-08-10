@@ -1,1 +1,33 @@
 /* Base styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ebebff;
+}
+
+:root {
+  --primaryColor: #6070ff;
+  --secondaryColor: #172b4d;
+  --button: #396df2;
+  --arrows: #acb7c3;
+  --fontWeight700: 700;
+}
+
+header {
+  margin: 25px 0 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
