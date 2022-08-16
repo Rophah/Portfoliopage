@@ -263,12 +263,15 @@
 }
 
 .popUp-button {
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .popUpbuttonDiv {
   display: flex;
   flex-direction: column;
+  width: 9rem;
+  text-align: center;
+  margin-top: -5px;
 }
 
 /* end of pop up modal section */

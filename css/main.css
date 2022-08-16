@@ -353,6 +353,7 @@ nav li {
   letter-spacing: 0.03em;
   margin-top: 10px;
   color: var(--button);
+  background: transparent;
 }
 
 .card1-project:hover {

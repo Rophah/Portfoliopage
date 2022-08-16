@@ -87,16 +87,20 @@ const projectnames = document.querySelector('.projectname');
 const subprojectnames = document.querySelector('.subprojectname');
 const years = document.querySelector('.year');
 const frontendBackendDev = document.querySelector('.frontendbackend');
-const technology1 = document.querySelector('.tech1');
-const technology2 = document.querySelector('.tech2');
-const technology3 = document.querySelector('.tech3');
-const githubsrcs = document.querySelector('.githubsrc');
+const technology1 = document.getElementById('tech1');
+const technology2 = document.getElementById('tech2');
+const technology3 = document.getElementById('tech3');
+const githubsrcs = document.getElementById('githubsrc');
+const button1 = document.getElementById('seeproject1');
+const button2 = document.getElementById('seeproject2');
+const button3 = document.getElementById('seeproject3');
+const button4 = document.getElementById('seeproject4');
 const closeBtn = document.querySelector('.popUpClose');
 const modal = document.querySelector('.modal-overlay');
 
-const buttons = document.querySelectorAll('.seeproject');
+let count = 0;
 
-const projectmodal = (count) => {
+const projectmodal = () => {
   const project = projects[count];
   images.src = project.image;
   details.textContent = project.details;
@@ -111,12 +115,32 @@ const projectmodal = (count) => {
   technology3.textContent = project.usedtechnology3;
 };
 
-buttons.forEach((element, index) => {
-  element.addEventListener('click', () => {
-    projectmodal(index);
-    modal.classList.add('open-modal');
-    document.body.style.overflow = 'hidden';
-  });
+button1.addEventListener('click', () => {
+  count = 0;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
+});
+
+button2.addEventListener('click', () => {
+  count = 1;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
+});
+
+button3.addEventListener('click', () => {
+  count = 2;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
+});
+
+button4.addEventListener('click', () => {
+  count = 3;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
 });
 
 closeBtn.addEventListener('click', () => {

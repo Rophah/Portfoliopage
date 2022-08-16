@@ -258,10 +258,3 @@ header {
 }
 
 /* end of Contact section */
-
-/* pop up modal */
-
-.popUpbuttonDiv {
-  display: flex;
-  flex-direction: row;
-}
