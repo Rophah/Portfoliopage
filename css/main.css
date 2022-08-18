@@ -687,3 +687,7 @@ textarea {
   line-height: 44px;
   color: var(--secondaryColor);
 }
+
+#git {
+  margin-left: 0.5rem;
+}

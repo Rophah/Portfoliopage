@@ -269,9 +269,13 @@
 .popUpbuttonDiv {
   display: flex;
   flex-direction: column;
-  width: 9rem;
+  width: 10rem;
   text-align: center;
   margin-top: -5px;
+}
+
+#githubsrc {
+  margin-left: 0;
 }
 
 /* end of pop up modal section */

@@ -80,19 +80,19 @@ navListItems.forEach((element) => {
 hamburger.addEventListener('click', mobileMenu);
 closed.addEventListener('click', mobileMenu);
 
-const images = document.querySelector('.project-img');
-const details = document.querySelector('.popUpPara');
-const projectsrcs = document.querySelector('.projectsrc');
-const projectnames = document.querySelector('.projectname');
-const subprojectnames = document.querySelector('.subprojectname');
-const years = document.querySelector('.year');
-const frontendBackendDev = document.querySelector('.frontendbackend');
-const technology1 = document.querySelector('.tech1');
-const technology2 = document.querySelector('.tech2');
-const technology3 = document.querySelector('.tech3');
-const githubsrcs = document.querySelector('.githubsrc');
-const closeBtn = document.querySelector('.popUpClose');
-const modal = document.querySelector('.modal-overlay');
+const images = document.querySelector('#project-img');
+const details = document.querySelector('#newdetail');
+const projectsrcs = document.querySelector('#projectsrc');
+const projectnames = document.querySelector('#projectname');
+const subprojectnames = document.querySelector('#subprojectname');
+const years = document.querySelector('#year');
+const frontendBackendDev = document.querySelector('#frontendbackend');
+const technology1 = document.querySelector('#tech1');
+const technology2 = document.querySelector('#tech2');
+const technology3 = document.querySelector('#tech3');
+const githubsrcs = document.querySelector('#githubsrc');
+const closeBtn = document.querySelector('#popUpClose');
+const modal = document.querySelector('#modal-overlay');
 
 const buttons = document.querySelectorAll('.seeproject');
 
@@ -114,12 +114,12 @@ const projectmodal = (count) => {
 buttons.forEach((element, index) => {
   element.addEventListener('click', () => {
     projectmodal(index);
-    modal.classList.add('open-modal');
+    modal.classList.toggle('open-modal');
     document.body.style.overflow = 'hidden';
   });
 });
 
 closeBtn.addEventListener('click', () => {
-  modal.classList.remove('open-modal');
+  modal.classList.toggle('open-modal');
   document.body.style.overflow = 'auto';
 });
