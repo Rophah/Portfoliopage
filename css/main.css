@@ -579,6 +579,21 @@ textarea {
   width: 15px;
 }
 
+.emailinput {
+  width: inherit;
+  position: relative; 
+}
+
+.email-icon{
+ position: absolute;
+ left: 85%;
+ /* top: 450px; */
+ top: 50%;
+ transform: translateY(-50%);
+ font-size: 22px;
+ color: #3847cf; 
+
+}
 /* Pop up */
 
 .flexx {

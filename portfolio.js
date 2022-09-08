@@ -156,3 +156,24 @@ if (content) {
     }
   });
 }
+
+const input = document.querySelector('.emailinput'),
+  emailicon = document.querySelector('.email-icon');
+
+input.addEventListener("keyup", () => {
+
+  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  
+  if(input.value === '') {
+    emailicon.classList.replace("fa-circle-check", "fa-envelope");
+    return emailicon.style.color = "#3847cf";
+  }
+  if(input.value.match(pattern)) {
+    emailicon.classList.replace("fa-envelope", "fa-circle-check");
+    return emailicon.style.color = "#3847cf"
+  }
+  emailicon.classList.replace("fa-circle-check", "fa-envelope");
+  return emailicon.style.color = "#de0611";
+
+});
+
