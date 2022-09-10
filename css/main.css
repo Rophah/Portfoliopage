@@ -68,10 +68,31 @@ nav li {
   color: var(--primaryColor);
   font-size: 1.5rem;
   cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+  transition: all 0.3s linear;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .close {
   display: none;
+  transition: all 0.3s linear;
+}
+
+#close-btn:hover {
+  transform: rotate(360deg);
 }
 
 .displayshow {
@@ -274,15 +295,11 @@ nav li {
 
 .canopy {
   color: #344563;
+  text-transform: capitalize;
 }
 
 .marginright {
   margin-right: 12px;
-}
-
-.counterimg {
-  width: 8px;
-  height: 8px;
 }
 
 .imgtext {
@@ -295,6 +312,8 @@ nav li {
   line-height: 24px;
   opacity: 0.8;
   word-spacing: 3px;
+  text-align: justify;
+  text-justify: inter-character;
 }
 
 .card1-button {
@@ -334,10 +353,11 @@ nav li {
   letter-spacing: 0.03em;
   margin-top: 10px;
   color: var(--button);
+  background: transparent;
 }
 
 .card1-project:hover {
-  background-color: var(--primaryColor);
+  background: var(--primaryColor);
   color: #fff;
   transform: scale(1.1);
 }
@@ -559,23 +579,115 @@ textarea {
   width: 15px;
 }
 
-/* Tablet view */
+/* Pop up */
 
-/* @media (min-width: 560px) and (max-width: 916px) {
+.flexx {
+  display: flex;
+  justify-content: space-between;
+}
 
-} */
+.popUpClose {
+  color: #67798e;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding-right: 0.8rem;
+}
 
-/* end of Tablet view */
+.popUpParagraph {
+  padding: 1.5rem 0;
+}
 
-/* Desktop view */
+.card1description-textpadding {
+  padding-bottom: 1rem;
+}
 
-/* @media screen and (min-width: 917px) {
-
-} */
-
-
-/* #btnControl:checked + ul {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(103, 121, 142, 0.7);
   display: none;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popUpModal {
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 100vh;
+
+  /* gap: 80px; */
+}
+
+/* open/close modal */
+.open-modal {
+  display: block;
+}
+
+.close-modal {
+  display: none;
+}
+
+.git {
+  margin-left: 5px;
+}
+
+#githubsrc {
+  margin-left: 0.5rem;
+}
+
+.popUpPara {
+  font-size: 15px;
+  line-height: 24px;
+  opacity: 0.8;
+  word-spacing: 3px;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+/* pop up modal */
+
+/* .popUpModal {
+  place-items: center;
 } */
 
-/* End of Desktop view */
+.pop {
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+  padding: 3rem 16px;
+  background: white;
+  border-radius: 0.9rem;
+}
+
+.popUpsection {
+  min-width: 375px;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  height: 100vh;
+  gap: 80px;
+  overflow-y: scroll;
+}
+
+.popUp-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.3rem 0 3rem 0;
+}
+
+.card1paragraph-te {
+  font-weight: var(--fontWeight700);
+  font-size: 20px;
+  line-height: 44px;
+  color: var(--secondaryColor);
+}
+
+#git {
+  margin-left: 0.5rem;
+}

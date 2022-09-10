@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="firstsection">
       <header>
@@ -26,7 +27,7 @@
             <span class="menu" id="hamburger">
               <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </span>
-            <span class="close" id="close">
+            <span class="close" id="close-btn">
               <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </span>
           </label>
@@ -124,7 +125,7 @@
         </div>
 
         <div class="card-content">
-          <div class="card1paragraph-text flexx">
+          <div class="card1paragraph-text">
             <h2>Tonic</h2>
           </div>
 
@@ -148,7 +149,9 @@
             <p class="card1-button-paragraph fontweight500">javascript</p>
           </div>
 
-          <a id="seeproject1" href="#" class="card1-project fontweight500">See Project</a>
+          <button type="submit" id="seeproject1" class="card1-project fontweight500 seeproject">
+            See Project
+          </button>
         </div>
       </div>
       <!-- End of Card 1 -->
@@ -185,7 +188,9 @@
             <p class="card1-button-paragraph">javascript</p>
           </div>
 
-          <a id="seeproject2" href="#" class="card1-project">See Project</a>
+          <button id="seeproject2" type="submit" class="card1-project seeproject">
+            See Project
+          </button>
         </div>
       </div>
       <!-- End of Card 2 -->
@@ -222,7 +227,9 @@
             <p class="card1-button-paragraph">javascript</p>
           </div>
 
-          <a id="seeproject" href="#" class="card1-project">See Project</a>
+          <button id="seeproject3" type="submit" class="card1-project seeproject">
+            See Project
+          </button>
         </div>
       </div>
       <!-- End of Card 3 -->
@@ -259,7 +266,7 @@
             <p class="card1-button-paragraph">javascript</p>
           </div>
 
-          <a id="project" href="#" class="card1-project">See Project</a>
+          <button type="submit" class="card1-project seeproject">See Project</button>
         </div>
       </div>
       <!-- End of Card 4 -->
@@ -422,6 +429,13 @@
       </div>
     </section>
     <!-- End of Content me section -->
+
+    <!-- Pop up -->
+
+    <div class="modal-overlay" id="modal-overlay">
+      <p>Working</p>
+    </div>
+    <!-- end of Pop up -->
     <script src="portfolio.js"></script>
   </body>
 </html>

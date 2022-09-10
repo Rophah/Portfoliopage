@@ -16,8 +16,8 @@
     "stylelint-scss": "^3.18.0"
   },
   "scripts": {
-    "format": "npx prettier  --write **/*.{html,js,json,md,json,yaml,yml,jsx}",
-    "format:check": "npx prettier  --check **/*.{html,js,json,md,json,yaml,yml}",
+    "format": "npx prettier  --write **/*.{html,json,md,json,yaml,yml,jsx}",
+    "format:check": "npx prettier  --check **/*.{html,json,md,json,yaml,yml}",
     "stylelint": "npx stylelint \"**/*.css\" --fix",
     "stylelint:check": "npx stylelint \"**/*.css\"",
     "hint": "npx hint --telemetry=off .",
