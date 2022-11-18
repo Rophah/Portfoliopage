@@ -518,6 +518,7 @@ textarea {
   width: 150px;
   border-radius: 8px;
   margin-bottom: 35px;
+  cursor: pointer;
 }
 
 .formbutton:hover {
@@ -525,7 +526,15 @@ textarea {
   color: #fff;
   transform: scale(1.1);
   border: 1px solid #fff;
-  cursor: pointer;
+  
+}
+
+.formbutton:disabled {
+  background-color: none;
+  color: initial;
+  transform: none;
+  border: none;
+  cursor: not-allowed;
 }
 
 .blackline {
@@ -581,19 +590,20 @@ textarea {
 
 .emailinput {
   width: inherit;
-  position: relative; 
+  position: relative;
 }
 
-.email-icon{
- position: absolute;
- left: 85%;
- /* top: 450px; */
- top: 50%;
- transform: translateY(-50%);
- font-size: 22px;
- color: #3847cf; 
+.email-icon {
+  position: absolute;
+  left: 85%;
 
+  /* top: 450px; */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #3847cf;
 }
+
 /* Pop up */
 
 .flexx {

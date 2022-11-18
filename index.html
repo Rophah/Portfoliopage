@@ -395,37 +395,59 @@
           <img src="images/contact/rectangle6.png" alt="rectangle6" class="rectangle6contact" />
         </div>
 
-        <form action="https://formspree.io/f/xbjwbpyj" method="POST" class="contactform">
-          <input
-            class="formradius forminput"
-            name="name"
-            type="text"
-            placeholder="Your name"
-            maxlength="30"
-            required
-          />
+        <form
+          action="https://formspree.io/f/xbjwbpyj"
+          method="POST"
+          class="contactform"
+          novalidate="novalidate"
+          target="_blank"
+        >
+          <div style="display: flex; flex-direction: column;">
+            <span id="usernameError"></span>
+            <input
+              class="formradius forminput"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Your name"
+              maxlength="30"
+              required
+            />
+          </div>
 
-          <input
-            class="formradius forminput emailinput"
-            name="email"
-            type="email"
-            placeholder="Your email"
-            required
-          />
-          <i class="fa-regular fa-envelope email-icon"></i>
+          <div style="display: flex; flex-direction: column;">
+            <span id="emailError"></span>
+            <input
+              class="formradius forminput emailinput"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Your email"
+              required
+            />
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <span id="messageError"></span>
+            <textarea
+              class="formradius"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              minlength="30"
+              maxlength="500"
+              required
+              placeholder="Write your message here"
+            ></textarea>
+          </div>
 
-          <textarea
-            class="formradius"
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            minlength="30"
-            maxlength="500"
-            required
-            placeholder="Write your message here"
-          ></textarea>
-          <button name="getintouch" type="submit" class="formbutton fontweight500">
+          <button
+            name="getintouch"
+            type="submit"
+            class="formbutton fontweight500"
+            id="button"
+            disabled
+          >
             Get In Touch
           </button>
         </form>

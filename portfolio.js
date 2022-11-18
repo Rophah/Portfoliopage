@@ -157,23 +157,101 @@ if (content) {
   });
 }
 
-const input = document.querySelector('.emailinput'),
-  emailicon = document.querySelector('.email-icon');
+const button = document.querySelector('#button');
+const username = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+const usernameError = document.querySelector('#usernameError');
+const emailError = document.querySelector('#emailError');
+const messageError = document.querySelector('#messageError');
 
-input.addEventListener("keyup", () => {
+const allErrors = {
+  emailIsValid: false,
+  usernameIsValid: false,
+  messagesValid: false,
+};
 
-  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const allValues = {
+  emailValue: false,
+  usernameValue: false,
+  messagesValue: false,
+};
+
+const changeButtonState = () => {
+  console.log(allErrors);
+  const { emailIsValid, usernameIsValid, messagesIsValid } = allErrors;
+  if (
+    emailIsValid || usernameIsValid || messagesIsValid
+  ) {
+    button.disabled = true;
+  } else {
+    button.disabled = false;
+  }
+};
+const checkIfnotEmpty = (value) => {
+  if (!value) {
+    return false;
+  }
+  return true;
+};
+
+const emailIsValid = (value) => {
+  const regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (value.match(regExp)) {
+    return true;
+  }
+  return false;
+};
+
+
+username.addEventListener('mouseout', (e) => {
+  allValues.usernameValue = e.target.value;
+  const checkUsernameIsValid = checkIfnotEmpty(e.target.value);
+  if (e.target.value.length < 5) {
+    usernameError.innerText = 'Name should not be less than 4 characters';
+    allErrors.usernameIsValid = true;
+  } else {
+    usernameError.innerText = '';
+    allErrors.usernameIsValid = false;
+  }
   
-  if(input.value === '') {
-    emailicon.classList.replace("fa-circle-check", "fa-envelope");
-    return emailicon.style.color = "#3847cf";
-  }
-  if(input.value.match(pattern)) {
-    emailicon.classList.replace("fa-envelope", "fa-circle-check");
-    return emailicon.style.color = "#3847cf"
-  }
-  emailicon.classList.replace("fa-circle-check", "fa-envelope");
-  return emailicon.style.color = "#de0611";
-
+  changeButtonState();
 });
 
+message.addEventListener('mouseout', (e) => {
+  allValues.messagesValue = e.target.value;
+  const checkMessageIsValid = checkIfnotEmpty(e.target.value);
+  if (e.target.value.length < 15) {
+    messageError.innerText = 'Message should not be less than 15 characters';
+    allErrors.messagesValid = true;
+  } else {
+    allErrors.messagesValid = false;
+    messageError.innerText = '';
+  }
+  
+  changeButtonState();
+});
+
+email.addEventListener('mouseout', (e) => {
+  allValues.emailValue = e.target.value;
+  const checkEmailIsValid = emailIsValid(e.target.value);
+  if (e.target.value.length < 8) {
+    emailError.innerText = 'Email address should not have less than 8 characters';
+    allErrors.emailIsValid = true;
+  }
+
+  if (!checkEmailIsValid) {
+    emailError.innerText = 'Email address should be a valid address';
+    allErrors.emailIsValid = true;
+  }
+  if (allValues.emailValue.length >= 8 && checkEmailIsValid) {
+    emailError.innerText = '';
+    allErrors.emailIsValid = false;
+  }
+  changeButtonState();
+});
+
+button.addEventListener('mouseover', (e) => {
+  changeButtonState();
+
+});
