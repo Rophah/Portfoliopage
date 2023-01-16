@@ -178,7 +178,6 @@ const allValues = {
 };
 
 const changeButtonState = () => {
-  console.log(allErrors);
   const { emailIsValid, usernameIsValid, messagesIsValid } = allErrors;
   if (
     emailIsValid || usernameIsValid || messagesIsValid
@@ -188,7 +187,7 @@ const changeButtonState = () => {
     button.disabled = false;
   }
 };
-const checkIfnotEmpty = (value) => {
+const checkIfIsEmpty = (value) => {
   if (!value) {
     return false;
   }
@@ -202,25 +201,23 @@ const emailIsValid = (value) => {
   }
   return false;
 };
-
-
 username.addEventListener('mouseout', (e) => {
   allValues.usernameValue = e.target.value;
-  const checkUsernameIsValid = checkIfnotEmpty(e.target.value);
+  const checkUsernameIsValid = checkIfIsEmpty(e.target.value);
   if (e.target.value.length < 5) {
     usernameError.innerText = 'Name should not be less than 4 characters';
     allErrors.usernameIsValid = true;
   } else {
     usernameError.innerText = '';
     allErrors.usernameIsValid = false;
-  }
-  
+  } 
+   
   changeButtonState();
 });
 
 message.addEventListener('mouseout', (e) => {
   allValues.messagesValue = e.target.value;
-  const checkMessageIsValid = checkIfnotEmpty(e.target.value);
+  const checkMessageIsValid = checkIfIsEmpty(e.target.value);
   if (e.target.value.length < 15) {
     messageError.innerText = 'Message should not be less than 15 characters';
     allErrors.messagesValid = true;
@@ -250,6 +247,6 @@ email.addEventListener('mouseout', (e) => {
   changeButtonState();
 });
 
-button.addEventListener('mouseover', (e) => {
+button.addEventListener('mouseover', () => {
   changeButtonState();
 });
