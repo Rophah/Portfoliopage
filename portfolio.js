@@ -227,8 +227,7 @@ message.addEventListener('mouseout', (e) => {
   } else {
     allErrors.messagesValid = false;
     messageError.innerText = '';
-  }
-  
+  } 
   changeButtonState();
 });
 
@@ -253,5 +252,4 @@ email.addEventListener('mouseout', (e) => {
 
 button.addEventListener('mouseover', (e) => {
   changeButtonState();
-
 });
