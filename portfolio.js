@@ -193,10 +193,10 @@ function validate() {
     } else if (message.value.trim().length < 5 || message.value.trim().length > 500) {
       messageInnerTextError();
     } else {
-      button.disabled = false;
       usernameError.innerText = '';
       messageError.innerText = '';
       emailError.innerText = '';
+      button.disabled = false;
     }
   });
 }
