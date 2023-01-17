@@ -164,89 +164,41 @@ const message = document.querySelector('#message');
 const usernameError = document.querySelector('#usernameError');
 const emailError = document.querySelector('#emailError');
 const messageError = document.querySelector('#messageError');
+const submit = document.querySelector('#button');
 
-const allErrors = {
-  emailIsValid: false,
-  usernameIsValid: false,
-  messagesValid: false,
+button.disabled = true;
+
+const reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+const nameInnerTextError = () => {
+  usernameError.innerText = 'Name should not be less than 4 characters';
 };
 
-const allValues = {
-  emailValue: false,
-  usernameValue: false,
-  messagesValue: false,
+const messageInnerTextError = () => {
+  messageError.innerText = 'Message should not be less than 15 characters';
 };
 
-const changeButtonState = () => {
-  const { emailIsValid, usernameIsValid, messagesIsValid } = allErrors;
-  if (
-    emailIsValid || usernameIsValid || messagesIsValid
-  ) {
-    button.disabled = true;
-  } else {
-    button.disabled = false;
-  }
-};
-const checkIfIsEmpty = (value) => {
-  if (!value) {
-    return false;
-  }
-  return true;
+const emailInnerTextError = () => {
+  emailError.innerText = 'Please input a valid email address';
 };
 
-const emailIsValid = (value) => {
-  const regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (value.match(regExp)) {
-    return true;
-  }
-  return false;
-};
-username.addEventListener('mouseout', (e) => {
-  allValues.usernameValue = e.target.value;
-  const checkUsernameIsValid = checkIfIsEmpty(e.target.value);
-  if (e.target.value.length < 5) {
-    usernameError.innerText = 'Name should not be less than 4 characters';
-    allErrors.usernameIsValid = true;
-  } else {
-    usernameError.innerText = '';
-    allErrors.usernameIsValid = false;
-  } 
-   
-  changeButtonState();
-});
+function validate() {
+  submit.addEventListener('mouseover', (e) => {
+    e.preventDefault();
 
-message.addEventListener('mouseout', (e) => {
-  allValues.messagesValue = e.target.value;
-  const checkMessageIsValid = checkIfIsEmpty(e.target.value);
-  if (e.target.value.length < 15) {
-    messageError.innerText = 'Message should not be less than 15 characters';
-    allErrors.messagesValid = true;
-  } else {
-    allErrors.messagesValid = false;
-    messageError.innerText = '';
-  } 
-  changeButtonState();
-});
+    if (username.value.trim().length < 3 || username.value.trim().length > 40) {
+      nameInnerTextError();
+    } else if (!email.value.match(reg)) {
+      emailInnerTextError();
+    } else if (message.value.trim().length < 5 || message.value.trim().length > 500) {
+      messageInnerTextError();
+    } else {
+      button.disabled = false;
+      usernameError.innerText = '';
+      messageError.innerText = '';
+      emailError.innerText = '';
+    }
+  });
+}
 
-email.addEventListener('mouseout', (e) => {
-  allValues.emailValue = e.target.value;
-  const checkEmailIsValid = emailIsValid(e.target.value);
-  if (e.target.value.length < 8) {
-    emailError.innerText = 'Email address should not have less than 8 characters';
-    allErrors.emailIsValid = true;
-  }
-
-  if (!checkEmailIsValid) {
-    emailError.innerText = 'Email address should be a valid address';
-    allErrors.emailIsValid = true;
-  }
-  if (allValues.emailValue.length >= 8 && checkEmailIsValid) {
-    emailError.innerText = '';
-    allErrors.emailIsValid = false;
-  }
-  changeButtonState();
-});
-
-button.addEventListener('mouseover', () => {
-  changeButtonState();
-});
+validate();
