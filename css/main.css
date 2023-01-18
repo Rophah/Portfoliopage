@@ -57,9 +57,9 @@ nav li {
 
 .nav-list li a {
   color: #fff;
-};
+}
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px) {
   #nav-list.active {
     display: block;
     height: 100vh;
@@ -527,7 +527,7 @@ textarea {
   background-color: transparent;
   color: #fff;
   transform: scale(1.1);
-  border: 1px solid #fff;  
+  border: 1px solid #fff;
 }
 
 .formbutton:disabled {
