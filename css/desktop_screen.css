@@ -257,4 +257,12 @@ header {
   text-align: center;
 }
 
+.email-icon {
+  position: absolute;
+  left: 71%;
+
+  /* top: 390px; */
+  top: 46.5%;
+}
+
 /* end of Contact section */

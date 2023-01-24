@@ -156,3 +156,57 @@ if (content) {
     }
   });
 }
+
+const button = document.querySelector('#button');
+const username = document.querySelector('#name');
+const email = document.querySelector('#email');
+const message = document.querySelector('#message');
+const usernameError = document.querySelector('#usernameError');
+const emailError = document.querySelector('#emailError');
+const messageError = document.querySelector('#messageError');
+const emptyFieldError = document.querySelector('#emptyFieldError');
+const submit = document.querySelector('#button');
+
+button.disabled = true;
+
+const reg = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+
+const nameInnerTextError = () => {
+  usernameError.innerText = 'Name should not be less than 4 characters';
+};
+
+const messageInnerTextError = () => {
+  messageError.innerText = 'Message should not be less than 15 characters';
+};
+
+const emailInnerTextError = () => {
+  emailError.innerText = 'Please input a valid email address';
+};
+
+const emptyFields = () => {
+  emptyFieldError.innerText = 'Please fill in all required fields';
+};
+
+function validate() {
+  submit.addEventListener('mouseover', (e) => {
+    e.preventDefault();
+
+    if (username.value === '' && email.value === '' && message.value === '') {
+      emptyFields();
+    } else if (username.value.trim().length < 3 || username.value.trim().length > 40) {
+      nameInnerTextError();
+    } else if (!email.value.match(reg)) {
+      emailInnerTextError();
+    } else if (message.value.trim().length < 5 || message.value.trim().length > 500) {
+      messageInnerTextError();
+    } else {
+      usernameError.innerText = '';
+      messageError.innerText = '';
+      emailError.innerText = '';
+      emptyFieldError.innerText = '';
+      button.disabled = false;
+    }
+  });
+}
+
+validate();

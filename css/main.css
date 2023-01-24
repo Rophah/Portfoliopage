@@ -59,9 +59,11 @@ nav li {
   color: #fff;
 }
 
-#nav-list.active {
-  display: block;
-  height: 100vh;
+@media screen and (max-width: 768px) {
+  #nav-list.active {
+    display: block;
+    height: 100vh;
+  }
 }
 
 #hamburger {
@@ -518,6 +520,7 @@ textarea {
   width: 150px;
   border-radius: 8px;
   margin-bottom: 35px;
+  cursor: pointer;
 }
 
 .formbutton:hover {
@@ -525,7 +528,14 @@ textarea {
   color: #fff;
   transform: scale(1.1);
   border: 1px solid #fff;
-  cursor: pointer;
+}
+
+.formbutton:disabled {
+  /* background-color: none; */
+  color: initial;
+  transform: none;
+  border: none;
+  cursor: not-allowed;
 }
 
 .blackline {
@@ -577,6 +587,22 @@ textarea {
   background: black;
   height: 2px;
   width: 15px;
+}
+
+.emailinput {
+  width: inherit;
+  position: relative;
+}
+
+.email-icon {
+  position: absolute;
+  left: 85%;
+
+  /* top: 450px; */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #3847cf;
 }
 
 /* Pop up */
@@ -649,11 +675,6 @@ textarea {
 }
 
 /* pop up modal */
-
-/* .popUpModal {
-  place-items: center;
-} */
-
 .pop {
   display: flex;
   flex-direction: column;

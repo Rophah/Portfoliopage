@@ -395,33 +395,54 @@
           <img src="images/contact/rectangle6.png" alt="rectangle6" class="rectangle6contact" />
         </div>
 
-        <form action="https://formspree.io/f/xbjwbpyj" method="POST" class="contactform">
-          <input
-            class="formradius forminput"
-            name="name"
-            type="text"
-            placeholder="Your name"
-            maxlength="30"
-            required
-          />
-          <input
-            class="formradius forminput"
-            name="email"
-            type="email"
-            placeholder="Your email"
-            required
-          />
-          <textarea
-            class="formradius"
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            maxlength="500"
-            required
-            placeholder="Write your message here"
-          ></textarea>
-          <button name="getintouch" type="submit" class="formbutton fontweight500">
+        <form
+          action="https://formspree.io/f/xbjwbpyj"
+          method="POST"
+          class="contactform"
+          target="_blank"
+        >
+          <p id="my-form-status"></p>
+          <span id="emptyFieldError"></span>
+          <div style="display: flex; flex-direction: column;">
+            <span id="usernameError"></span>
+            <input
+              class="formradius forminput"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Your name"
+              maxlength="30"
+              required
+            />
+          </div>
+
+          <div style="display: flex; flex-direction: column;">
+            <span id="emailError"></span>
+            <input
+              class="formradius forminput emailinput"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Your email"
+              required
+            />
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <span id="messageError"></span>
+            <textarea
+              class="formradius"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              minlength="10"
+              maxlength="500"
+              required
+              placeholder="Write your message here"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="formbutton fontweight500" id="button">
             Get In Touch
           </button>
         </form>
@@ -435,6 +456,7 @@
     <div class="modal-overlay" id="modal-overlay">
       <p>Working</p>
     </div>
+
     <!-- end of Pop up -->
     <script src="portfolio.js"></script>
   </body>
