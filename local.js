@@ -1,6 +1,7 @@
+// local project data
 const projects = [
   {
-    id: 0,
+    id: 1,
     projectname: 'Tonic',
     subprojectname: 'canopy',
     projecttype: 'Back end dev',
@@ -79,80 +80,70 @@ navListItems.forEach((element) => {
 hamburger.addEventListener('click', mobileMenu);
 closed.addEventListener('click', mobileMenu);
 
-const content = document.querySelector('#modal-overlay');
+const images = document.querySelector('.project-img');
+const details = document.querySelector('.popUpPara');
+const projectsrcs = document.querySelector('.projectsrc');
+const projectnames = document.querySelector('.projectname');
+const subprojectnames = document.querySelector('.subprojectname');
+const years = document.querySelector('.year');
+const frontendBackendDev = document.querySelector('.frontendbackend');
+const technology1 = document.getElementById('tech1');
+const technology2 = document.getElementById('tech2');
+const technology3 = document.getElementById('tech3');
+const githubsrcs = document.getElementById('githubsrc');
+const button1 = document.getElementById('seeproject1');
+const button2 = document.getElementById('seeproject2');
+const button3 = document.getElementById('seeproject3');
+const button4 = document.getElementById('seeproject4');
+const closeBtn = document.querySelector('.popUpClose');
+const modal = document.querySelector('.modal-overlay');
 
-const modal = document.querySelector('#modal-overlay');
+let count = 0;
 
-const buttons = document.querySelectorAll('.seeproject');
-
-const modalContent = (count) => {
-  content.innerHTML = `
-<div class="popUpsection">
-  <div class="pop">
-    <div class="card1paragraph-te flexx">
-      <h1 class="projectname" id="projectname"> ${projects[count].projectname}  </h1>
-      <span class="popUpClose">
-        <i class="fa-solid fa-xmark popUpClose" aria-hidden="true"></i>
-      </span>
-    </div>
-    <div class="card1description-text">
-      <p class="canopy marginright fontweight700" id="subprojectname">
-      ${projects[count].subprojectname} 
-      </p>
-
-      <img src="images/part/counter.png" alt="counter" class="counterimg marginright" />
-      <p class="imgtext marginright" id="frontendbackend"> ${projects[count].projecttype} </p>
-
-      <img src="images/part/counter.png" alt="counter" class="counterimg marginright" />
-      <p class="imgtext marginright year" id="year"> ${projects[count].year} </p>
-    </div>
-
-    <img
-      src= '${projects[count].image}' 
-      alt="Tonic"
-      class="popimg"
-      id="project-img"
-    />
-
-    <div class="popdetails">
-      <p class="popUpPara popUpParagraph" id="newdetail">
-      ${projects[count].details} 
-      </p>
-
-      <div>
-        <div class="popUp-button">
-          <p class="card1-button-paragraph fontweight500" id="tech1"> ${projects[count].usedtechnology1} </p>
-          <p class="card1-button-paragraph fontweight500" id="tech2"> ${projects[count].usedtechnology2} </p>
-          <p class="card1-button-paragraph fontweight500" id="tech3"> ${projects[count].usedtechnology3} </p>
-        </div>
-
-        <div class="popUpbuttonDiv">
-          <a href= '${projects[count].projectsrc}'  class="card1-project fontweight500" id="projectsrc">See live</a>
-
-          <a href= '${projects[count].githubsrc}'  class="card1-project fontweight500" id="githubsrc"
-            >See source<img src="images/git/git.png" id="git" alt="github" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  `;
+const projectmodal = () => {
+  const project = projects[count];
+  images.src = project.image;
+  details.textContent = project.details;
+  projectsrcs.href = project.projectsrc;
+  projectnames.textContent = project.projectname;
+  subprojectnames.textContent = project.subprojectname;
+  years.textContent = project.year;
+  frontendBackendDev.textContent = project.projecttype;
+  githubsrcs.href = project.githubsrc;
+  technology1.textContent = project.usedtechnology1;
+  technology2.textContent = project.usedtechnology2;
+  technology3.textContent = project.usedtechnology3;
 };
 
-buttons.forEach((element, index) => {
-  element.addEventListener('click', () => {
-    modalContent(index);
-    modal.classList.toggle('open-modal');
-    document.body.style.overflow = 'hidden';
-  });
+button1.addEventListener('click', () => {
+  count = 0;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
 });
 
-if (content) {
-  content.addEventListener('click', (e) => {
-    if (e.target.classList.contains('popUpClose')) {
-      modal.classList.toggle('open-modal');
-      document.body.style.overflow = 'auto';
-    }
-  });
-}
+button2.addEventListener('click', () => {
+  count = 1;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
+});
+
+button3.addEventListener('click', () => {
+  count = 2;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
+});
+
+button4.addEventListener('click', () => {
+  count = 3;
+  projectmodal();
+  modal.classList.add('open-modal');
+  document.body.style.overflow = 'hidden';
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('open-modal');
+  document.body.style.overflow = 'auto';
+});
