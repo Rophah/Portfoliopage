@@ -220,14 +220,6 @@
   display: none;
 }
 
-.email-icon {
-  position: absolute;
-  left: 79%;
-  left: 85%;
-  top: 450px;
-  transform: translateY(-50%);
-}
-
 /* End of Contact section */
 
 /* pop up modal section */
