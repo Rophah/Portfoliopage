@@ -164,6 +164,7 @@ const message = document.querySelector('#message');
 const usernameError = document.querySelector('#usernameError');
 const emailError = document.querySelector('#emailError');
 const messageError = document.querySelector('#messageError');
+const emptyFieldError = document.querySelector('#emptyFieldError');
 const submit = document.querySelector('#button');
 
 button.disabled = true;
@@ -182,21 +183,28 @@ const emailInnerTextError = () => {
   emailError.innerText = 'Please input a valid email address';
 };
 
+const emptyFields = () => {
+  emptyFieldError.innerText = 'Please fill in all required fields';
+};
+
 function validate() {
   submit.addEventListener('mouseover', (e) => {
     e.preventDefault();
 
-    if (username.value.trim().length < 3 || username.value.trim().length > 40) {
+    if (username.value === '' && email.value === '' && message.value === '') {
+      emptyFields();
+    } else if (username.value.trim().length < 3 || username.value.trim().length > 40) {
       nameInnerTextError();
     } else if (!email.value.match(reg)) {
       emailInnerTextError();
     } else if (message.value.trim().length < 5 || message.value.trim().length > 500) {
       messageInnerTextError();
     } else {
-      button.disabled = false;
       usernameError.innerText = '';
       messageError.innerText = '';
       emailError.innerText = '';
+      emptyFieldError.innerText = '';
+      button.disabled = false;
     }
   });
 }

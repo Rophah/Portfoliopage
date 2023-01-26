@@ -400,9 +400,9 @@
           method="POST"
           class="contactform"
           target="_blank"
-          validate= "no_validate";
         >
-        <p id="my-form-status"></p>
+          <p id="my-form-status"></p>
+          <span id="emptyFieldError"></span>
           <div style="display: flex; flex-direction: column;">
             <span id="usernameError"></span>
             <input
@@ -442,11 +442,7 @@
             ></textarea>
           </div>
 
-          <button
-            type="submit"
-            class="formbutton fontweight500"
-            id="button"
-          >
+          <button type="submit" class="formbutton fontweight500" id="button">
             Get In Touch
           </button>
         </form>
@@ -460,9 +456,8 @@
     <div class="modal-overlay" id="modal-overlay">
       <p>Working</p>
     </div>
-    
+
     <!-- end of Pop up -->
     <script src="portfolio.js"></script>
-
   </body>
 </html>
