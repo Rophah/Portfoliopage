@@ -12,6 +12,7 @@ Additional description about the project and its features.
 - CSS
   - CSS Flexbox
   - CSS Media Query
+  -javascript
 - stylint
 
 ## Live Demo
