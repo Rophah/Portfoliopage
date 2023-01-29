@@ -4,14 +4,13 @@ My personal résumé website, created using HTML and CSS. Displays my web presen
 
 ![screenshot](./app_screenshot.png)
 
-
 ## Built With
 
 - HTML
 - CSS
   - CSS Flexbox
   - CSS Media Query
-  -javascript
+    -javascript
 - stylint
 
 ## Live Demo
