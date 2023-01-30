@@ -157,7 +157,6 @@ if (content) {
   });
 }
 
-// const button = document.querySelector('#button');
 const username = document.querySelector('#name');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
@@ -186,7 +185,7 @@ const messageInnerTextError = () => {
 };
 
 function validate() {
-  submit.addEventListener('click', (e) => {
+  submit.addEventListener('mouseover', (e) => {
     e.preventDefault();
 
     if (username.value === '' && email.value === '' && message.value === '') {
@@ -204,6 +203,10 @@ function validate() {
       emptyFieldError.innerText = '';
     }
   });
+
+  username.value = '';
+  email.value = '';
+  message.value = '';
 }
 
 validate();

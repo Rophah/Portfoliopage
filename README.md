@@ -14,6 +14,7 @@ My personal résumé website, created using HTML and CSS. Displays my web presen
 - stylint
 
 ## Live Demo
+
 [portfolio-link](https://rophah-portfolio.netlify.app)
 
 ### Development (Running locally)
