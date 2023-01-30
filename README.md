@@ -4,17 +4,18 @@ My personal résumé website, created using HTML and CSS. Displays my web presen
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
-
 ## Built With
 
 - HTML
 - CSS
   - CSS Flexbox
   - CSS Media Query
+    -javascript
 - stylint
 
 ## Live Demo
+
+[portfolio-link](https://rophah-portfolio.netlify.app)
 
 ### Development (Running locally)
 

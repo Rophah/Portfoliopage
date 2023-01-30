@@ -157,7 +157,6 @@ if (content) {
   });
 }
 
-const button = document.querySelector('#button');
 const username = document.querySelector('#name');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
@@ -167,24 +166,22 @@ const messageError = document.querySelector('#messageError');
 const emptyFieldError = document.querySelector('#emptyFieldError');
 const submit = document.querySelector('#button');
 
-button.disabled = true;
-
 const reg = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+
+const emptyFields = () => {
+  emptyFieldError.innerText = 'Please fill in all required fields';
+};
 
 const nameInnerTextError = () => {
   usernameError.innerText = 'Name should not be less than 4 characters';
-};
-
-const messageInnerTextError = () => {
-  messageError.innerText = 'Message should not be less than 15 characters';
 };
 
 const emailInnerTextError = () => {
   emailError.innerText = 'Please input a valid email address';
 };
 
-const emptyFields = () => {
-  emptyFieldError.innerText = 'Please fill in all required fields';
+const messageInnerTextError = () => {
+  messageError.innerText = 'Message should not be less than 5 characters';
 };
 
 function validate() {
@@ -204,9 +201,12 @@ function validate() {
       messageError.innerText = '';
       emailError.innerText = '';
       emptyFieldError.innerText = '';
-      button.disabled = false;
     }
   });
+
+  username.value = '';
+  email.value = '';
+  message.value = '';
 }
 
 validate();
