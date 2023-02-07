@@ -157,56 +157,74 @@ if (content) {
   });
 }
 
-const button = document.querySelector('#button');
 const username = document.querySelector('#name');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
-const usernameError = document.querySelector('#usernameError');
-const emailError = document.querySelector('#emailError');
-const messageError = document.querySelector('#messageError');
-const emptyFieldError = document.querySelector('#emptyFieldError');
-const submit = document.querySelector('#button');
+const button = document.querySelector('#button');
 
-button.disabled = true;
-
-const reg = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
-
-const nameInnerTextError = () => {
-  usernameError.innerText = 'Name should not be less than 4 characters';
+const setError = (value, message) => {
+  const formControl = value.parentElement;
+  const small = formControl.querySelector('small');
+  small.innerText = message;
+  formControl.className = 'form-control get-error';
 };
 
-const messageInnerTextError = () => {
-  messageError.innerText = 'Message should not be less than 15 characters';
+const setSuccess = (value, message) => {
+  const formControl = value.parentElement;
+  const small = formControl.querySelector('small');
+  small.innerText = message;
+  formControl.className = 'form-control get-success';
 };
 
-const emailInnerTextError = () => {
-  emailError.innerText = 'Please input a valid email address';
+const disableBtn = (value) => {
+  button.disabled = value;
+};
+disableBtn(true);
+
+const emailCheck = (email) => {
+  // eslint-disable-next-line operator-linebreak
+  const getEmail =
+    /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return getEmail.test(String(email).toLowerCase());
 };
 
-const emptyFields = () => {
-  emptyFieldError.innerText = 'Please fill in all required fields';
+const validateName = () => {
+  if (username.value === '') {
+    setError(username, 'Name cannot be empty');
+    disableBtn(true);
+  } else if (username.value.length < 3) {
+    setError(username, 'Name must be at least 3 characters');
+    disableBtn(true);
+  } else {
+    setSuccess(username, '');
+  }
 };
 
-function validate() {
-  submit.addEventListener('mouseover', (e) => {
-    e.preventDefault();
+const validateEmail = () => {
+  if (email.value === '') {
+    setError(email, 'Email cannot be empty');
+    disableBtn(true);
+  } else if (!emailCheck(email.value)) {
+    setError(email, 'Email is not valid');
+    disableBtn(true);
+  } else {
+    setSuccess(email, '');
+  }
+};
 
-    if (username.value === '' && email.value === '' && message.value === '') {
-      emptyFields();
-    } else if (username.value.trim().length < 3 || username.value.trim().length > 40) {
-      nameInnerTextError();
-    } else if (!email.value.match(reg)) {
-      emailInnerTextError();
-    } else if (message.value.trim().length < 5 || message.value.trim().length > 500) {
-      messageInnerTextError();
-    } else {
-      usernameError.innerText = '';
-      messageError.innerText = '';
-      emailError.innerText = '';
-      emptyFieldError.innerText = '';
-      button.disabled = false;
-    }
-  });
-}
+const validateMessage = () => {
+  if (message.value === '') {
+    setError(message, 'Message cannot be empty');
+    disableBtn(true);
+  } else if (message.value.length < 15) {
+    setError(message, 'Message should be more than 15 characters');
+    disableBtn(true);
+  } else {
+    setSuccess(message, '');
+    disableBtn(false);
+  }
+};
 
-validate();
+username.addEventListener('input', validateName);
+email.addEventListener('input', validateEmail);
+message.addEventListener('input', validateMessage);
