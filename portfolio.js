@@ -162,6 +162,20 @@ const email = document.querySelector('#email');
 const message = document.querySelector('#message');
 const button = document.querySelector('#button');
 
+const navbar = document.querySelector('#nav');
+const navbarHeight = navbar.getBoundingClientRect().height;
+
+window.addEventListener('scroll', () => {
+  const windowHeight = window.pageYOffset;
+  if (windowHeight > navbarHeight) {
+    navbar.classList.add('fixed');
+  } else {
+    navbar.classList.remove('fixed');
+  }
+});
+
+console.log(navbarHeight);
+
 const setError = (value, message) => {
   const formControl = value.parentElement;
   const small = formControl.querySelector('small');
@@ -181,6 +195,23 @@ const disableBtn = (value) => {
 };
 disableBtn(true);
 
+const storeValues = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+const setValues = () => {
+  storeValues.name = username.value;
+  storeValues.email = email.value;
+  storeValues.message = message.value;
+  localStorage.setItem('myValues', JSON.stringify(storeValues));
+};
+
+const getValues = () => {
+  localStorage.getItem('storeValues');
+};
+
 const emailCheck = (email) => {
   // eslint-disable-next-line operator-linebreak
   const getEmail =
@@ -198,6 +229,7 @@ const validateName = () => {
   } else {
     setSuccess(username, '');
   }
+  setValues();
 };
 
 const validateEmail = () => {
@@ -210,6 +242,7 @@ const validateEmail = () => {
   } else {
     setSuccess(email, '');
   }
+  setValues();
 };
 
 const validateMessage = () => {
@@ -223,8 +256,10 @@ const validateMessage = () => {
     setSuccess(message, '');
     disableBtn(false);
   }
+  setValues();
 };
 
 username.addEventListener('input', validateName);
 email.addEventListener('input', validateEmail);
 message.addEventListener('input', validateMessage);
+window.addEventListener('load', getValues);
