@@ -8,6 +8,17 @@
 }
 
 /* NAVIGATION BAR */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  z-index: 999;
+  padding: 1.5rem 0;
+  box-shadow: 0 0 20px rgb(131, 131, 131);
+}
+
 .logo-container,
 .hamburger-btn {
   display: flex;
@@ -531,11 +542,38 @@ textarea {
 }
 
 .formbutton:disabled {
-  /* background-color: none; */
   color: initial;
   transform: none;
   border: none;
   cursor: not-allowed;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control .error {
+  position: absolute;
+  top: 40%;
+  left: 90%;
+  visibility: hidden;
+}
+
+.form-control .success {
+  position: absolute;
+  top: 23%;
+  left: 90%;
+  visibility: hidden;
+}
+
+.get-success .success {
+  color: #32cd32;
+  visibility: visible;
+}
+
+.get-error .error {
+  color: #ff6b00;
+  visibility: visible;
 }
 
 .blackline {
@@ -594,17 +632,6 @@ textarea {
   position: relative;
 }
 
-.email-icon {
-  position: absolute;
-  left: 85%;
-
-  /* top: 450px; */
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 22px;
-  color: #3847cf;
-}
-
 /* Pop up */
 
 .flexx {
@@ -644,8 +671,6 @@ textarea {
   grid-template-columns: 1fr;
   place-items: center;
   min-height: 100vh;
-
-  /* gap: 80px; */
 }
 
 /* open/close modal */

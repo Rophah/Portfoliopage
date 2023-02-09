@@ -18,7 +18,7 @@
   <body>
     <div class="firstsection">
       <header>
-        <nav>
+        <nav id="nav">
           <div class="logo-container fontweight700">
             <p class="logo-text">ROFAH ADEBANJO</p>
           </div>
@@ -402,9 +402,8 @@
           target="_blank"
         >
           <p id="my-form-status"></p>
-          <span id="emptyFieldError"></span>
-          <div style="display: flex; flex-direction: column;">
-            <span id="usernameError"></span>
+          <div class="form-control" style="display: flex; flex-direction: column;">
+            <small></small>
             <input
               class="formradius forminput"
               name="name"
@@ -414,10 +413,12 @@
               maxlength="30"
               required
             />
+            <i class="fas fa-exclamation-circle error"></i>
+            <i class="fas fa-check-circle success"></i>
           </div>
 
-          <div style="display: flex; flex-direction: column;">
-            <span id="emailError"></span>
+          <div class="form-control" style="display: flex; flex-direction: column;">
+            <small></small>
             <input
               class="formradius forminput emailinput"
               id="email"
@@ -426,20 +427,24 @@
               placeholder="Your email"
               required
             />
+            <i class="fas fa-exclamation-circle error"></i>
+            <i class="fas fa-check-circle success"></i>
           </div>
-          <div style="display: flex; flex-direction: column;">
-            <span id="messageError"></span>
+          <div class="form-control" style="display: flex; flex-direction: column;">
+            <small></small>
             <textarea
               class="formradius"
               name="message"
               id="message"
               cols="30"
               rows="10"
-              minlength="10"
+              minlength="5"
               maxlength="500"
               required
               placeholder="Write your message here"
             ></textarea>
+            <i class="fas fa-exclamation-circle error"></i>
+            <i class="fas fa-check-circle success"></i>
           </div>
 
           <button type="submit" class="formbutton fontweight500" id="button">
