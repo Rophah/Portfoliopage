@@ -174,8 +174,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-console.log(navbarHeight);
-
 const setError = (value, message) => {
   const formControl = value.parentElement;
   const small = formControl.querySelector('small');
